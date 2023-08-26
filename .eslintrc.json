@@ -1,0 +1,15 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["standard","standard-jsx", "standard-react"],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "react/prop-types": "off"
+    }
+}
