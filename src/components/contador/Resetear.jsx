@@ -6,6 +6,7 @@ export function Resetear ({ value, onChange }) {
     onChange(0)
     console.log('Reseteo -> ', value)
   }
+
   return (
     <>
       <Text>{value}</Text>

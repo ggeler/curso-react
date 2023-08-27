@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Incrementar } from './Incrementar'
 import { Decrementar } from './Decrementar'
 import { Resetear } from './Resetear'
+import { Text } from 'react-native'
 
 export function ContadorWrapper () {
   const [contador, setContador] = useState(0)
@@ -12,6 +13,9 @@ export function ContadorWrapper () {
   }
   return (
     <>
+      <Text>
+        Clicks: {contador}
+      </Text>
       <Incrementar value={contador} onChange={(x) => handleContador(x)} />
       <Decrementar value={contador} onChange={handleContador} />
       <Resetear value={contador} onChange={handleContador} />

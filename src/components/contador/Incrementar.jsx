@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Text } from 'react-native'
+import { Button } from 'react-native'
 import ContadorValue from './ContadorValue'
 
 export function Incrementar ({ value, onChange }) {
@@ -7,6 +7,7 @@ export function Incrementar ({ value, onChange }) {
     onChange(++value)
     console.log('Incremento -> ', value)
   }
+
   return (
     <>
       <ContadorValue value={value} />
