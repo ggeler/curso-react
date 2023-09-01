@@ -8,12 +8,13 @@ import Constants from 'expo-constants'
 const Main = () => {
   return (
     <View style={styles.container}>
-      <ContadorWrapper />
       <Nombre />
+      <ContadorWrapper />
       <CronoWrapper />
     </View>
   )
 }
+export default Main
 
 const styles = StyleSheet.create({
   container: {
@@ -24,10 +25,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',/
     */
     marginTop: Constants.statusBarHeight,
-    flex: Constants.flexibility,
+    flex: 1,
     backgroundColor: 'red',
     padding: 20
   }
 })
-
-export default Main
