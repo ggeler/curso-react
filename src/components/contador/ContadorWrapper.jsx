@@ -11,6 +11,11 @@ export function ContadorWrapper () {
     setContador(e)
     console.log('Valor en wrapper->', e)
   }
+
+  const props = {
+    value: contador,
+    onChange: handleContador
+  }
   return (
     <>
       <Text>
@@ -18,7 +23,7 @@ export function ContadorWrapper () {
       </Text>
       <Incrementar value={contador} onChange={(x) => handleContador(x)} />
       <Decrementar value={contador} onChange={handleContador} />
-      <Resetear value={contador} onChange={handleContador} />
+      <Resetear {...props} />
     </>
   )
 }

@@ -8,23 +8,23 @@ import CronoWrapper from './components/cronometro/CronoWrapper'
 
 const MainRouteNative = () => {
   return (
-    <>
+    <NativeRouter>
       <View>
-        <Link to='/'><Button title='Nombre' /></Link>
+        <Link to='/'><Nombre /></Link>
+        <Link to='/contador'><ContadorWrapper /></Link>
+        <Link to='/cronometro'><CronoWrapper /></Link>
       </View>
-      <NativeRouter>
-        <Routes>
-          <Route path='/' element={<Nombre />} exact><Text>Nombre</Text></Route>
-          <Route path='/contador' Component={<ContadorWrapper />} exact><Text>Contador</Text> </Route>
-          <Route path='/cronometro' Component={<CronoWrapper />} exact><Text>Cronometro</Text> </Route>
-          <Redirect to='/' />
-        </Routes>
-      </NativeRouter>
-    </>
+      <Route path='/' Component={Nombre} exact />
+      <Route path='/contador' Component={ContadorWrapper} />
+      <Route path='/cronometro' Component={CronoWrapper} />
+      <Redirect to='/' />
+    </NativeRouter>
+
   )
 }
 
 export default MainRouteNative
+
 const styles = StyleSheet.create({
   container: {
     /*

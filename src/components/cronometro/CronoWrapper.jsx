@@ -70,7 +70,7 @@ function CronoWrapper () {
     <View>
       {renderTime(reloj)}
       {(!isStarted && !isPaused) ? <Button title='Iniciar' onPress={handleStart} /> : null}
-      {(isStarted && !isPaused) ? <Button title='PAusar' onPress={handlePause} /> : null}
+      {(isStarted && !isPaused) ? <Button title='Pausar' onPress={handlePause} /> : null}
       {(isStarted) ? <Button title='Reiniciar' onPress={handleReset} /> : null}
       {(isPaused) ? <Button title='Resumir' onPress={handleResume} /> : null}
       {(isStarted && !isPaused) ? <CronoConLap reloj={reloj} lapState={lapState} setLapState={setLapState} /> : null}

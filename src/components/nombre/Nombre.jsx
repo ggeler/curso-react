@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Text, TextInput } from 'react-native'
 
-function Nombre() {
+function Nombre () {
   const [nombre, setNombre] = useState('')
 
   const presionoButton = () => {

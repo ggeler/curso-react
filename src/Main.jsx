@@ -1,17 +1,23 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StatusBar, StyleSheet, View } from 'react-native'
 import { ContadorWrapper } from './components/contador/ContadorWrapper'
 import { Nombre } from './components/nombre/Nombre'
 import CronoWrapper from './components/cronometro/CronoWrapper'
 import Constants from 'expo-constants'
 
+/*
+<Nombre />
+      <CronoWrapper />
+*/
 const Main = () => {
   return (
-    <View style={styles.container}>
-      <Nombre />
-      <ContadorWrapper />
-      <CronoWrapper />
-    </View>
+    <>
+      <StatusBar style='#fff' animated barStyle='light-content' />
+      <View style={styles.container}>
+        <CronoWrapper />
+        <ContadorWrapper />
+      </View>
+    </>
   )
 }
 export default Main
@@ -26,7 +32,7 @@ const styles = StyleSheet.create({
     */
     marginTop: Constants.statusBarHeight,
     flex: 1,
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
     padding: 20
   }
 })

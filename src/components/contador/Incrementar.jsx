@@ -2,16 +2,16 @@ import React from 'react'
 import { Button } from 'react-native'
 import ContadorValue from './ContadorValue'
 
-export function Incrementar ({ value, onChange }) {
-  const incrementar = () => {
-    onChange(++value)
-    console.log('Incremento -> ', value)
-  }
+function incrementar (value, onChange) {
+  onChange(++value)
+  console.log('Incremento -> ', value)
+}
 
+export function Incrementar ({ value = 0, onChange }) {
   return (
     <>
       <ContadorValue value={value} />
-      <Button title='Incrementar' onPress={() => incrementar()} />
+      <Button title='Incrementar' onPress={() => incrementar(value, onChange)} />
     </>
   )
 }
