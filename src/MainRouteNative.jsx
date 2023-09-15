@@ -5,6 +5,7 @@ import Constants from 'expo-constants'
 import { Link, NativeRouter, Redirect, Route, Routes, Switch } from 'react-router-native'
 import { ContadorWrapper } from './components/contador/ContadorWrapper'
 import CronoWrapper from './components/cronometro/CronoWrapper'
+import Temporizador from './components/temporizador/Temporizador'
 
 const MainRouteNative = () => {
   return (
